@@ -1,0 +1,29 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${ip}:3306/icon?useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&allowPublicKeyRetrieval=true
+    username: root
+    password: chb1025
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss  # 统一时间格式
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+ip: 127.0.0.1
+
+alipay:
+  appId: 2021000148643721
+  appPrivateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+LP76dEZRvqeqdYmsMvY2/fWHoD8xHTDC9WZJd6lMHxxHGaDPua3OfbAqeUz1XQ1ulHsL6dHG4cyLBaCO52KX4nKm4Klup40YbTCA41gMDWavBklJF9A/l1TaWj9wVUR2oQX4nh0cBnwQXutG1Cck/9RlfTAHnNpmpQpRdUNnpEgx7xljS2Y512hEhpaRAm0LMPY4o2BECgSRijxBNuGopf2CmxB0h/rJzxEE/tSO1dIQiIL3I7n5pNt+sxZc7v07LDvtWzsExaofkBLjU7+ka1+6or0i72fM6X0TI4JMLR3SdNwi2+bjOfgHFn10yOEwikB1J8wcIUoHFk/o9jDXAgMBAAECggEAXIVvl1GyVFq5H4kHbattdduf9FfV5oMZEgBpvxxkVRBdpYmmXukq0eb8Ke3Rrx2SR1YddvJOiL+Zz5jxQBT6NoKI3P837wm870FP86SnVVW/uy8HwHPBcO6i7YgyjOgu4rf8O7RQ3S2adix3soHMeYetQaLiFxIMfxuUJYUzQdwnTWLYLZmZ4maDrCM8Afge5HPA+exfOPtE6vLp1cTye96kz48rqAIINBsle7xDnIjTEwSa1opzAKAsEbYmYZcLgF7sKVidOfxN7coMXRO7XH3iSfLg3Na/4oXrnC21zgC+yQl2Hei0f/cpy/7iVm/0g+aDgr03ahhqs4C+uEEXQQKBgQDydYYxsPJp91Q3naddHLa7ow0dOgUtlQPCYxpu+WJUokyU71KICwM8NNKNxBgLlrAvLEsOd0P8RFohSSIWcPuwqsQN+2snuuvWehlFeWSCSFQTSr9eLn3qo4Z7jnq1XaXfkIaQQhKcMJCK999v7MzEJvVG1wh9KbYvjy7OrHHRiQKBgQDIy/gRSKuXzLTLFBOa6v83hTdc6ld36nOyL4ewsQV2T9rM0zou4NFGtNGoGZvtSV2uvmjUV35JlSZl665KBC/Ua9bIvnsmokFOeY+kqkNRJEM+XxT33QiXQxj14A1XUt8jtw61au2xRbnCVdVmc3Gq/kCsl6k7KzOZjb94TM03XwKBgQC16HsAOTQHUOs8tunksDBhYxnpvag45L5nT5d7f1vJB+PRMiWHsEuDFlaKyn8H4szY97BwcAbv9BBzPL14fNg5WkWx/9oLevCKgB0JxOQl40JBHymo7dTHAF1bwjBKdrKGo5ZyEUCJMt6fhQ18mfufh2Mq/RZ/YZYw5IpHwZW7kQKBgFGjzKqKV2oSyvc+pHH6VeYm/cmDZijVZFDwTkUi1Eu0UAuzXhatRalv30Zvkxw5FiP0Ov8Ky8fzIneSCX0CksfVSLC58axVkCPt/N9AcrpM+iIj2oyki9ekakOd4w68HQmSZiKQ5S+MX+iJqYhMK80QLw99YksyV3p5TX4GC/IVAoGAR/3PQe3RHXsEcF7+uWme0YeaQoK0GzdPMsZwt2RbRCC3MQ/mnGHMhBZdK4/3MO7PJac/6UhYJ1UPpICTSKYLzGikQm+0R+i5FCllj7XV6onCONtNLww5F2BDcOYGbxY9X+b65Bg8RHB/STKdRJOsB3ILcrPfItvl82lVHOdV25A=
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlRIVOvbAmMz1zUwMHoYlpnrl/WCtmuyNSJCUor2XAwNyDwGV/Uv2Lr367KzFcJxvzeKIvDLifcqYfo8oHJ4iqSx6k9BMyFL0fRjUY04wEvtTUMvNvFYmeX/M8FypBwY5lezX8jEFzWcNmYpFE6p7L8eRPV1O1pXCwjOpfhsHWYeL5tWgl6R2eLudA1gVlNQqv4241QTWNIJeXzQO2P1KcezsN3tcwf4e/zTwsSnUd3YpM9wdzQixmpFye3786EWvknU32nD1SeJI0riKys4h1b87lrC/uILMoGW30z8wlnxly7CrjTqtx4iW4C0C2gnrGxd2mQWMS6Ji1gbngT8BjwIDAQAB
+  notifyUrl: http://t6a556.natappfree.cc/alipay/notify

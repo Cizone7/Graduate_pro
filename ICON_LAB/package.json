@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@iconify-json/line-md": "^1.2.5",
+    "@iconify/iconify": "^3.1.1",
+    "@iconify/json": "^2.2.320",
+    "@iconify/utils": "^1.0.33",
+    "@iconify/vue2": "^2.1.0",
+    "axios": "^1.8.4",
+    "canvg": "^4.0.3",
+    "html-to-image": "^1.11.13",
+    "svg2img": "^1.0.0-beta.2"
+  }
+}
