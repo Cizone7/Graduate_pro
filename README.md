@@ -40,20 +40,12 @@ cd Graduate_pro
 ```
 
 2) 创建虚拟环境并安装 Python 依赖（需要根据你的环境选择 GPU/CPU 版 torch）
-- 建议依赖（根据代码导入推断）：
+- 建议依赖：
   - torch, torchvision
   - pillow (PIL)
   - tensorboardX
   - flask, flask-cors, werkzeug
   - numpy, matplotlib, tqdm
-安装示例（示意）：
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install torch torchvision pillow tensorboardX flask flask-cors numpy matplotlib tqdm
-```
-注意：根据你的 CUDA 版本，选择合适的 torch 安装命令（见官方安装说明）。
 
 3) 获取必要的数据与预训练模型
 - README 原有链接（保留，点击访问）：
@@ -125,13 +117,3 @@ package.json 中列出的主要前端依赖：@iconify/iconify、@iconify/vue2�
 ## 常见问题
 - GPU 显存不足：在 WebService 中会捕获并提示；可尝试减小输入分辨率或在推理时使用 CPU（性能下降）。
 - 模型文件缺失：请确保 `experiments/` 下包含 vgg 与训练好的 transformer/decoder/embedding 权重。
-
-## 许可与贡献
-若希望我帮你把这个 README 提交为 repo 的 README.md（commit / PR），回复我“提交 README”并说明是否在新分支上打开 PR，我可以为你执行更新（或把 README 作为 patch 给你复制粘贴）。
-
----
-
-如果你需要，我可以：
-- 把上面的 README.md 直接提交到仓库（创建分支 + 打开 PR）。
-- 生成一个 requirements.txt 与前端启动脚本示例（package.json scripts）。
-- 为 WebService 添加更健壮的错误日志与配置项（例如模型路径、host、port、最大分辨率等）。
